@@ -1,0 +1,86 @@
+﻿*{margin: 0px ;padding: 0px ;font-size: 16px}
+body{background: whitesmoke}
+@font-face
+{
+    font-family: 华文行楷;
+    src: url(STXINGKA.TTF);
+}
+.nav{margin-top: 5px}
+.navbar-inverse .navbar-nav>li>a:hover{background-color: #6997c7}
+.nav>li>a:hover{background: #6997c7; color: white;border-radius: 20px;}/* 鼠标移入事件*/
+.nav>li>a:focus{background: none;}/*  鼠标点击后事件 */
+.logo{
+   padding-top: 12px;font-size: 30px;color: white;font-family: 华文行楷;
+}
+
+
+.con-bg{background: url("../img/friend1.jpg") center;height: 400px;
+    border-radius: 10px;margin-top: 80px;}
+.content-text{margin-top: 150px}
+.content-text p{font-size: 20px}
+.row_p{background: white;margin: 20px 0px; border-radius: 10px;height: 50px;line-height: 50px}
+/*  友情链接一栏*/
+.a_link{color: #6997c7;}
+.a_link:hover{color: #8c8c8c}
+
+/*  友情链接媒体对象 */
+#container{}
+.div_media{width: 220px; height: 160px ; background: #ececec;border-radius: 10px;margin: 0px auto;}
+.div_media:hover{border-bottom: 7px solid #1E9FFF;transform: translateY(-5px);transition: all 0.5s ease}
+.rowmargin{margin-top: 20px}
+.rowmargin:last-of-type{margin-bottom: 20px}
+.media{margin-top: 30px}
+.media-right, .media>.pull-right {
+    padding-top: 30px;
+    padding-left: 86px;
+}
+.media img{
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+
+/*底部*/
+.foot{margin: 60px 0px 20px 0px}
+#time{border-bottom: 1px dashed black;padding-bottom: 10px}
+
+
+/* 大屏 */
+@media (min-width: 1200px){
+    #container {
+        width: 1139px;
+        border-radius: 10px;
+    }
+
+}
+
+/*  小屏 */
+@media screen and (max-width: 768px){
+
+    #menu{color: #222}
+    .logo{
+        padding-left:25px;padding-top: 10px;font-size: 30px;font-family: 华文行楷;
+    }
+
+    /* 轮播图*/
+    .con-bg{background: url("../img/friend1.jpg") center;height: 200px;
+        border-radius: 10px;margin-top: 70px;  background-size: 100%;}
+    .content-text{margin-top: 50px}
+    .content-text p{font-size: 16px}
+
+
+
+    /* 友链*/
+    .div_media{width: 260px; height: 160px ; background: #8b8b8b;border-radius: 10px;margin: 0px auto;}
+    .media-right, .media>.pull-right {
+        padding-top: 30px;
+        padding-left: 105px;
+    }
+    .rowmargin{margin-top: 0px}
+    .col-ms-6:nth-of-type(1){margin-top: 20px}
+    .col-ms-6{margin-bottom: 20px}
+
+    .foot{margin: 50px auto;height: 100px}
+
+}

@@ -1,0 +1,390 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html lang="en" class="no-ie" style="overflow: hidden;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>BOOK STORE</title>
+
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/statics/css/layui.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/statics/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath }/statics/css/User/home_page.css">
+
+    <style type="text/css">
+        /*
+                    核心在于 外层 overflow:hidden;position:relative; 内层 position: absolute;right: -17px;,
+                    内层的width不合适的话可以单独调整
+                    边框显示是为了方便识别 body、外层、内层边界
+                */
+        * {
+            margin: 0;
+        }
+
+        #container-outer {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #container-inner {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: -17px;
+            overflow: auto;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+.thumbnail {
+    display: block;
+    padding: 4px;
+    margin-bottom: 25px;
+    background-color:transparent;
+    border: none;
+
+}
+
+        
+        
+        .layui-nav{
+       		 background-color: #eee;
+       	 }
+       	 
+       	 .layui-nav-more{
+       	 	 color: black;
+       		 border-top-color:black;
+       	 }
+     
+		.layui-nav-tree .layui-nav-item a {
+		  color: #FF5722!important;
+		    font-weight:bold;
+		  background-color: #eee;
+		}
+		
+		.layui-nav .layui-nav-mored, .layui-nav-itemed>a .layui-nav-more{
+		    border-color: transparent transparent #920404;
+
+		}
+		.layui-nav .layui-nav-more {
+    		border-color:#920404 transparent transparent ;
+    	}
+		
+        
+		.layui-nav-itemed{
+			background-color: #eee;
+		}
+		
+		.layui-nav-tree .layui-nav-item a:hover {
+		    background-color: #ccc;
+		    text-decoration: none;
+		}
+		
+		
+		.layui-side {
+			border-right: 1px dashed #ccc;
+		}
+	
+        
+     
+    </style>
+    
+    <script type="text/javascript">
+
+    </script>
+
+
+</head>
+
+<body class="layui-layout-body" style="overflow: Scroll; overflow-y: hidden"  >
+
+
+<div id="container-outer">
+    <div id="container-inner">
+
+        <div id="all" class="layui-layout layui-layout-admin">
+            <div class="layui-header layui-bg-red">
+                <div class="layui-logo" style="color: #ffffff; font-size: 24px">Book Store</div>
+                
+           <!--      头部区域（可配合layui已有的水平导航）
+                
+                <ul class="layui-nav layui-layout-left">
+                    <li class="layui-nav-item"><a href="">控制台</a></li>
+                    <li class="layui-nav-item"><a href="">商品管理</a></li>
+                    <li class="layui-nav-item"><a href="">用户</a></li>
+                    <li class="layui-nav-item"><a href="javascript:;">其它系统</a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="">邮件管理</a>
+                            </dd>
+                            <dd>
+                                <a href="">消息管理</a>
+                            </dd>
+                            <dd>
+                                <a href="">授权管理</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    -->
+
+
+
+                </ul>
+                <ul class="layui-nav layui-layout-right">
+                    <li class="layui-nav-item">
+                    <a href="javascript:;"> 
+                   		 <img src="${pageContext.request.contextPath }/statics/${user.photo}" height="64" width="64" class="layui-nav-img"/>
+                   		 <span style="color: white;" class="userName_exit">${user.name}</span>
+                    </a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a id="${user.name}" class="btn userinfo">基本资料</a>
+                            </dd>
+                            <dd>
+                                <a class="btn">安全设置</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item"><a href="exitLogin?name=${user.name}">退出</a></li>
+                </ul>
+            </div>
+
+            <div id="con">
+
+
+                <div class="layui-side " >
+                <div class="layui-side-scroll " style="background-color: #eee" >
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree showbook " lay-filter="test">
+                <li class="layui-nav-item layui-nav-itemed ">
+                <a id="9">上升榜</a>
+                <!--   href="findbook?id=9"  -->
+                <dl class="layui-nav-child">
+                <dd>
+                <a href="findbook?id=1" > &nbsp;&nbsp;爱情</a>
+                </dd>
+                <dd>
+                <a href="findbook?id=2" >&nbsp;&nbsp;悬疑</a>
+                </dd>
+                <dd>
+                <a href="findbook?id=3" >&nbsp;&nbsp;科幻</a>
+                </dd>
+                <dd>
+                <a href="findbook?id=4" >&nbsp;&nbsp;金融</a>
+                </dd>
+                <dd>
+                <a href="findbook?id=5" >&nbsp;&nbsp;都市生活</a>
+                </dd>
+                </dl>
+                </li>
+                <li class="layui-nav-item"><a id="10">收藏榜</a>
+                <!--   href="findbook?id=10"  -->
+                <dl class="layui-nav-child">
+                <dd>
+                <a class="leave_Apply" href="findbook?id=3" >&nbsp;&nbsp;科幻</a>
+                </dd>
+                <dd>
+                <a href="findbook?id=2">&nbsp;&nbsp;悬疑</a>
+                </dd>
+                <dd>
+                <a href="findbook?id=5">&nbsp;&nbsp;都市生活</a>
+                </dd>
+                </dl>
+                </li>
+                <li class="layui-nav-item"><a id="6">历史</a></li>
+                <li class="layui-nav-item"><a id="7">经典</a></li>
+                <li class="layui-nav-item"><a id="8">二次元</a></li>
+                <li class="layui-nav-item"><a>搜索</a></li>
+                </ul>
+                </div>
+                </div>
+
+                <div class="layui-body">
+
+                <!-- 内容主体区域 -->
+                <div class="container" style="margin: 0px">
+                <div class="row" style="padding:0px 45px">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+
+                <div class="page-header">
+                
+                <ol class="breadcrumb">
+					  <li><a href="#">Home</a></li>
+					  <li><a href="#">Library</a></li>
+					  <li class="active">${booktype.type }</li>
+					  <li class="text-right pull-right">${booktype.type } :${book_info_type } / 总书籍: ${totalCount } </li>
+					  
+				</ol>
+                
+        
+                <div class="col-lg-8 col-md-9 "></div>
+               
+                
+	                <div class="col-lg-4 col-md-3 pull-right text-right" style="padding-right: 0px;">
+	                 <form action="SearchBook" method="post">
+			                <div class="input-group">
+			                <input type="text" class="form-control" name="book_name" value="" placeholder="Search book...">
+			                <span class="input-group-btn">
+			                <button class="btn btn-default" type="submit">Go!</button>
+			                </span>
+			                </div>
+	                 </form>
+	                </div>
+
+               
+                <br/>
+                </div>
+
+
+                </div>
+
+                </div>
+
+                <div class="row" id="main">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="four">
+
+                <div class="row">
+
+                <c:forEach var="book" items="${Book_infos}">
+
+                    <div class="col-md-3 bookinfo">
+                    <div class="thumbnail">
+                    <img
+                    src="${pageContext.request.contextPath}/statics/${book.photo}"
+                    width="150px" height="200px" alt="photo">
+                    <div class="caption">
+                    <p class="bookprice">
+                    原价:<span
+                    style="color: #ccc; font-size: 14px">${book.price}￥</span>
+                    折扣价:<span
+                    style="color: red; font-size: 18px">${book.disprice}￥</span>
+                    </p>
+
+                    <p align="center">
+
+                    <a class="btn btn-primary Productbtn" id="${book.no}"
+                    role="button">详情</a> <a class="btn btn-default buyBook"
+                    id="${book.no}" role="button">购买</a>
+
+                    </p>
+                    </div>
+                    </div>
+                    </div>
+
+                </c:forEach>
+
+
+                </div>
+
+
+                <div class="row nextPage">
+
+                <ul class="pager">
+                <li><a href="#" class="pageGo">上一页</a></li>
+                <li><a href="#"><span class="pageNum">${pageIndex }</span>/<span
+                class="totalPageNum">${page.totalPageCount }</span></a></li>
+                <li><a href="#" class="pageNext">下一页</a></li>
+                </ul>
+
+                </div>
+
+                <br/>
+
+
+                </div>
+                </div>
+                </div>
+
+
+                </div>
+
+
+                </div>
+
+
+                <div class="layui-footer">
+
+
+
+
+             </div>
+
+                <!-- 底部固定区域 -->
+                © bookStore.com - 底部固定区域
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+
+<script src="${pageContext.request.contextPath }/statics/js/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath }/statics/layui.all.js"></script>
+<script src="${pageContext.request.contextPath }/statics/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath }/statics/js/index.js"></script>
+
+<script>
+
+    //JavaScript代码区域
+    layui.use('element', function () {
+        var element = layui.element;
+
+    });
+    
+
+/*    function CloseOpen() {
+
+            var r=confirm("要离开此页吗!");
+            if (r==true)
+            {
+                alert("你同意了!");
+                //关闭前干掉别的
+                window.close();//关闭
+            }
+            else
+            {
+                alert("你不同意!");//
+                //能做点别的
+            }
+        }*/
+
+
+    window.onbeforeunload=function (){
+        alert("===οnbefοreunlοad===");
+        if(event.clientX>document.body.clientWidth && event.clientY < 0 || event.altKey){
+            alert("你关闭了浏览器");
+        }else{
+            alert("你正在刷新页面");
+        }
+    };
+
+
+
+
+    /*为了更好兼容各大浏览器，可以使用下面的js代码 - inlojv.com */
+    var parent = document.getElementById('container-outer');
+    var child = document.getElementById('container-inner');
+    child.style.right = child.clientWidth - child.offsetWidth + "px";
+    
+  
+    
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>友人帐</title>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/friend.css">
+    <script src="js/tx/click.js"></script>
+
+</head>
+<body>
+
+    <nav class="navbar  navbar-fixed-top navbar-inverse" style=" border: none;">
+        <div class="container">
+        <div class="navbar-header">
+            <!--
+            .navbar-header——主要指定div为导航条组件包裹图标及切换按钮；
+            .navbar-toggle——设置button小屏显示的包含三横的按钮
+            .collapse——设置button元素为在视口小于768px时才显示；
+            .navbar-brand——设置导航条组件内的logo图标；
+            .navbar-brand默认是放文字的,也可以放图片，但必须是小图片,如果图片太大，位置就会靠下.
+            -->
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span><a href="#" class=""><div class="logo">HZ</div></a></span>
+        </div>
+        <!--右边-->
+        <div id="menu" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class=""><a href="index.html" style="color: white">首页</a></li>
+                <li><a href="diary.html" style="color: white">日记</a></li>
+                <li><a href="time.html" style="color: white">时光录</a></li>
+                <li><a href="#" style="color: white">友人帐</a></li>
+                <li><a href="about.html" style="color: white">关于我</a></li>
+                <li><a href="#" style="color: white">
+                    <i class="layui-icon layui-icon-login-qq" style="font-size: 24px">
+                    </i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+
+    <div class="container con2">
+        <!--轮播图-->
+            <div id="carousel-example-generic" class="carousel slide con-bg" data-ride="carousel" data-interval="1500">
+                <ol class="carousel-indicators">
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <div class="content-text">
+                            <h1 class="h3 text-center" style="font-weight: bold">我的友人帐</h1>
+                            <p class="text-center" >我推荐的一些个人主页</p>
+                            <p class="text-center" ><span class="span-hover">VIEW MORE</span></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="content-text">
+                            <h1 class="h3 text-center" style="font-weight: bold">我的个人主页</h1>
+                            <p class="text-center">与学校课程同步提升学习成绩 培养兴趣也要提升成绩</p>
+                            <p class="text-center" ><span class="span-hover">VIEW MORE</span></p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="content-text">
+                            <h1 class="h3 text-center" style="font-weight: bold">关于友人帐</h1>
+                            <p class="text-center">与学校课程同步提升学习成绩 培养兴趣也要提升成绩</p>
+                            <p class="text-center" ><span class="span-hover">VIEW MORE</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="container" >
+
+        <div class="row row_p">
+            <div class="col-md-2 col-sm-4 pull-left"><p><img src="img/youlain.png" alt="null"> 友情链接</p></div>
+            <div class="col-md-2 col-sm-4 pull-right text-right">
+                <a href="#" class="a_link"style="text-decoration: none;">申请链接 <span class="glyphicon glyphicon-arrow-right" style="margin-top: 5px"></a></span>
+            </div>
+        </div>
+
+        <div class="container" id="container" style="background: white">
+            <div class="row rowmargin">
+                <div class="col-md-3 col-ms-6 ">
+                    <div class="div_media">
+                        <div class="media">
+                            <div class="media-right text-centert">
+                                <a href="#">
+                                    <img class="media-object" src="img/icon1.png" alt="null">
+                                </a>
+                            </div>
+
+                            <div class="media-heading text-center">
+                                <h4 class="media-heading" style="padding: 5px 0px ">Media heading</h4>
+                                我的友联
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-ms-6">
+                    <div class="div_media">
+                        <div class="media">
+                            <div class="media-right text-centert">
+                                <a href="#">
+                                    <img class="media-object" src="img/icon2.png" alt="null">
+                                </a>
+                            </div>
+
+                            <div class="media-heading text-center">
+                                <h4 class="media-heading" style="padding: 5px 0px ">Media heading</h4>
+                                我的友联
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 col-ms-6">
+                    <div class="div_media">
+                        <div class="media">
+                            <div class="media-right text-centert">
+                                <a href="#">
+                                    <img class="media-object" src="img/icon3.png" alt="null">
+                                </a>
+                            </div>
+
+                            <div class="media-heading text-center">
+                                <h4 class="media-heading" style="padding: 5px 0px ">Media heading</h4>
+                                我的友联
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 col-ms-6">
+                    <div class="div_media">
+                        <div class="media">
+                            <div class="media-right text-centert">
+                                <a href="#">
+                                    <img class="media-object" src="img/icon4.png" alt="null">
+                                </a>
+                            </div>
+
+                            <div class="media-heading text-center">
+                                <h4 class="media-heading" style="padding: 5px 0px ">Media heading</h4>
+                                我的友联
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row rowmargin">
+                <div class="col-md-3 col-ms-6 ">
+                    <div class="div_media">
+                        <div class="media">
+                            <div class="media-right text-centert">
+                                <a href="#">
+                                    <img class="media-object" src="img/icon5.jpg" alt="null">
+                                </a>
+                            </div>
+
+                            <div class="media-heading text-center">
+                                <h4 class="media-heading" style="padding: 5px 0px ">Media heading</h4>
+                                我的友联
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-ms-6">
+                    <div class="div_media">
+                        <div class="media">
+                            <div class="media-right text-centert">
+                                <a href="#">
+                                    <img class="media-object" src="img/icon8.jpg" alt="null">
+                                </a>
+                            </div>
+
+                            <div class="media-heading text-center">
+                                <h4 class="media-heading" style="padding: 5px 0px ">Media heading</h4>
+                                我的友联
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 col-ms-6">
+                    <div class="div_media">
+                        <div class="media">
+                            <div class="media-right text-centert">
+                                <a href="#">
+                                    <img class="media-object" src="img/icon6.png" alt="null">
+                                </a>
+                            </div>
+
+                            <div class="media-heading text-center">
+                                <h4 class="media-heading" style="padding: 5px 0px ">Media heading</h4>
+                                我的友联
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 col-ms-6">
+                    <div class="div_media">
+                        <div class="media">
+                            <div class="media-right text-centert">
+                                <a href="#">
+                                    <img class="media-object" src="img/icon7.jpg" alt="null">
+                                </a>
+                            </div>
+
+                            <div class="media-heading text-center">
+                                <h4 class="media-heading" style="padding: 5px 0px ">Media heading</h4>
+                                我的友联
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row rowmargin">
+                <div class="col-md-3 col-ms-6 ">
+                    <div class="div_media">
+                        <div class="media">
+                            <div class="media-right text-centert">
+                                <a href="#">
+                                    <img class="media-object" src="img/icon9.png" alt="null">
+                                </a>
+                            </div>
+
+                            <div class="media-heading text-center">
+                                <h4 class="media-heading" style="padding: 5px 0px ">Media heading</h4>
+                                我的友联
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-ms-6">
+                    <div class="div_media">
+                        <div class="media">
+                            <div class="media-right text-centert">
+                                <a href="#">
+                                    <img class="media-object" src="img/icon12.jpg" alt="null">
+                                </a>
+                            </div>
+
+                            <div class="media-heading text-center">
+                                <h4 class="media-heading" style="padding: 5px 0px ">Media heading</h4>
+                                我的友联
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 col-ms-6">
+                    <div class="div_media">
+                        <div class="media">
+                            <div class="media-right text-centert">
+                                <a href="#">
+                                    <img class="media-object" src="img/icon10.jpg" alt="null">
+                                </a>
+                            </div>
+
+                            <div class="media-heading text-center">
+                                <h4 class="media-heading" style="padding: 5px 0px ">Media heading</h4>
+                                我的友联
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 col-ms-6">
+                    <div class="div_media">
+                        <div class="media">
+                            <div class="media-right text-centert">
+                                <a href="#">
+                                    <img class="media-object" src="img/icon11.jpg" alt="null">
+                                </a>
+                            </div>
+
+                            <div class="media-heading text-center">
+                                <h4 class="media-heading" style="padding: 5px 0px ">Media heading</h4>
+                                我的友联
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="foot">
+        <div class="container">
+            <div class="row" id="time">
+                <div class="col-md-3 col-sm-4 pull-left">更新时间：<span style="color: #1E9FFF"> 2019-4-28</span></div>
+                <div class="col-md-3 col-sm-4 pull-right text-right">
+                    <a href="#" class="a_link" style="text-decoration: none">
+                        <i class="layui-icon layui-icon-login-qq" style="font-size: 30px; color: black"></i>
+                        <i class="layui-icon layui-icon-login-wechat" style="font-size: 30px; color: black"></i>
+                        <i class="layui-icon layui-icon-login-weibo" style="font-size: 30px; color: black"></i>
+                    </a></span>
+                </div>
+            </div>
+            <div class="row">
+                <p style="font-size: 14px;color: #a2a2a2;margin-left: 15px;margin-top: 5px">Copyright © 2019-2020 HZ。 盗版必究 蜀ICP备16008852号</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+</body>
+</html>

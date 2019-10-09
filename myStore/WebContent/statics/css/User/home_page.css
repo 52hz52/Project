@@ -1,0 +1,67 @@
+.layui-layout-admin .layui-body {
+    top: 60px;
+    bottom: 27px;
+    background: #eeeeee;
+}
+
+
+	
+.four {
+   width: 100%;
+   background-color:#eee;
+   margin-right: 15px;
+   border-radius: 7px;
+}
+		        
+
+
+.bookinfo{
+	height: 350px;
+	overflow: hidden;
+}
+.bookprice{
+	text-align: center;
+}
+.layui-footer{
+    background: #e3e3e3;
+    color: black;
+}
+
+/* ∑÷“≥  */
+.nextPage{
+	margin: 20px auto;
+	background: #eee;
+}
+
+
+
+/*  ¥Û  */
+@media screen and (max-width: 1200px) and (max-width: 993px) {
+
+    .four{
+        width: 80%;
+        margin: -15px 10%  15px 10%;
+        background: #eee;
+        border-radius: 7px;
+    }
+
+}
+
+
+/*  –°  */
+@media screen and (min-width: 768px) and (max-width: 992px){
+
+    .four{
+        width: 90%;
+        margin: -15px 5%  15px 5%;
+        background: #eee;
+        border-radius: 7px;
+    }
+   .bookinfo{
+	height: 250px;
+	overflow: hidden;
+    }
+
+
+
+}

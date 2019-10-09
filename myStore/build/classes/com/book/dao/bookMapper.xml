@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.book.dao.bookMapper">
+
+<!-- 查找书籍类型  -->
+<select id="selectBookList" resultType="book_info">
+		select *  from book_info where booktype=#{booktype} limit #{from},#{pageSize}
+</select>
+
+<!-- 书籍详情 -->
+<select id="selectBookProduct" resultType="book_info">
+	select * from book_info where no=#{no} 
+</select>
+
+<!-- 书籍类型 -->
+<select id="selectBooktype" resultType="book_type">
+	select * from book_type where id=#{id} 
+</select>
+
+
+<!-- 搜索书籍 like -->
+<select id="SearchBookList" resultType="book_info">
+		SELECT * FROM book_info WHERE name LIKE CONCAT(CONCAT('%', #{name}), '%');
+</select>
+
+
+
+<!-- 所有书籍总行数  -->
+	<select id="getBookCount" resultType="int">
+		select count(*)  from book_info 
+		<trim prefix="where" prefixOverrides="and | or">
+			<if test="booktype != null and booktype != '' ">
+				and booktype=#{booktype}
+			</if>
+		</trim>
+	</select>
+	
+
+<!-- 上传书籍  -->
+<insert id="insertBook" parameterType="Integer">
+insert into book_info(name,photo,author,house,time,bookinfo,price,disprice,booktype,attrbute)
+ values ( #{name},#{photo},#{author},#{house},#{time},#{bookinfo},#{price},#{disprice},#{booktype},#{attrbute} )
+
+</insert>
+
+
+
+	
+</mapper>

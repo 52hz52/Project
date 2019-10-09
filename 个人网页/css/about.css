@@ -1,0 +1,51 @@
+﻿*{margin: 0px ;padding: 0px ;font-size: 16px;}
+body{background: whitesmoke}
+@font-face
+{
+    font-family: 华文行楷;
+    src: url(STXINGKA.TTF);
+}
+.nav{margin-top: 5px}
+.navbar-inverse .navbar-nav>li>a:hover{background-color: #6997c7}
+.nav>li>a:hover{background: #6997c7; color: white;border-radius: 20px;}/* 鼠标移入事件*/
+.nav>li>a:focus{background: none;}/*  鼠标点击后事件 */
+.logo{
+    padding-top: 12px;font-size: 30px;color: white;font-family: 华文行楷;
+}
+
+#row_img{
+    margin-top: 80px;
+    height: 400px;
+    background: url(../img/forme.jpg) center;
+    border-radius: 10px;
+}
+.row_p{background: white;margin: 20px 0px; border-radius: 10px;height: 50px;line-height: 50px}
+.row_div{background: white; border-radius: 10px;margin: 0px 0px}
+.row_div p{padding-left: 35px;margin: 15px 0px; color: #416990;}
+.a_link{color: #6997c7;}
+.a_link:hover{color: #8c8c8c}
+
+
+/*底部*/
+.foot{margin: 60px 0px 20px 0px}
+#time{border-bottom: 1px dashed black;padding-bottom: 10px}
+
+
+/*  小屏 */
+@media screen and (max-width: 768px) {
+    #menu {color: #222}
+    #row_img{
+        margin-top: 70px;
+        height: 200px;
+        background: url(../img/forme.jpg)  center;
+        background-size: 100%;
+        border-radius: 10px;
+    }
+    .logo {
+        padding-left: 25px;
+        padding-top: 10px;
+        font-size: 30px;
+        font-family: 华文行楷;
+    }
+    .foot{margin: 50px auto;height: 100px}
+}

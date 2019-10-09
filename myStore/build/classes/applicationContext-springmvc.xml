@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    
+<!-- ###修改###  -->
+    <!-- 自动扫描 Controller 包  -->
+    <context:component-scan base-package="com.book.controller"/>
+    <mvc:annotation-driven/>
+  
+   <!-- statics 下位静态资源  不被拦截  -->
+    <mvc:resources location="/statics/" mapping="/statics/**"/>
+
+ 
+<!--    上传文件的设置 ，maxUploadSize=-1，表示无穷大。uploadTempDir为上传的临时目录
+   <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"> 
+      	<property name="defaultEncoding" value="UTF-8"/>
+		<property name="maxUploadSize" value="5400000"/>
+		<property name="uploadTempDir" value="fileUpload/temp"/>
+   </bean>      
+  
+  
+   -->
+   
+   <!-- 文件上传的解析器 -->
+<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    <!-- 编码格式 -->
+    <property name="defaultEncoding" value="UTF-8"/>
+    <!-- 配置上传文件的大小，以字节为单位；-1代表没有限制 -->
+    <property name="maxUploadSize" value="-1"/>
+</bean>
+
+   
+	<!-- 完成视图的对应 -->
+	<!-- 对转向页面的路径解析。prefix：前缀， suffix：后缀 -->
+	<!-- 配置多视图解析器：允许同样的内容数据呈现不同的view -->
+	<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+		<property name="favorParameter" value="true"/>
+		<property name="defaultContentType" value="text/html"/>
+		<property name="mediaTypes">
+			<map>
+				<entry key="html" value="text/html;charset=UTF-8"/>
+				<entry key="json" value="application/json;charset=UTF-8"/>
+				<entry key="xml" value="application/xml;charset=UTF-8"/>
+			</map>
+		</property>
+		<property name="viewResolvers">
+			<list>
+				<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
+					<property name="prefix" value="/WEB-INF/jsp/"/>
+					<property name="suffix" value=".jsp"/>
+				</bean>		
+			</list>
+		</property>
+	</bean>
+
+</beans>
