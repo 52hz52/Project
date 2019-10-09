@@ -1,0 +1,138 @@
+/* CSS Document */
+body,div,h1,h2,h3,h4,h5,h6,input,header,main,ul,li,footer,p,span,section{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    height: 100%;
+    min-width: 960px;
+}
+/*瀹氫箟缃戦〉鏁翠綋鏍峰紡*/
+body{
+    background:url(../images/bj.jpg) no-repeat;
+	font-size: 14px;
+    font-family: "microsoft yahei";
+    -webkit-background-size: 100%;
+    background-size: 100%;
+    color: #222;
+}
+dl,dt,dd{ padding:; margin:0;}
+
+header{
+    height: 80px;
+    padding-left: 80px;
+    background: rgba(100, 100, 100, 0.4);
+}
+/*澶撮儴logo*/
+#logo{ width:150px; 
+	height:80px; 
+	float:left; 
+	line-height:80px;
+}
+/*澶撮儴鏂囧瓧*/
+h1{
+    line-height:80px;
+	margin-left:20px;
+	color:#FFF;
+    font-size: 30px;
+    float: left;
+}
+/*澶撮儴鎼滄*/
+#weather_search{
+    margin-top: 10px;
+    float: left;
+	line-height:60px;
+	height:80px;
+}
+/*鎼滅储妗�*/
+#weather_search #text{ 
+	width:220px; 
+	padding-left:10px; 
+	padding-right:10px;
+	height:35px;
+	margin-left:15px;
+}
+/*鏌ヨ鎸夐挳*/
+#weather_search img{
+		width:120px;
+		height:35px;
+	}
+/*榧犳爣鍋滃湪鎸夐挳涓婃椂灏嗗厜鏍囧彉涓烘墜*/
+#weather_search #btn:hover{
+	cursor:pointer;
+	}
+#weather_search #btn{
+	margin-left:5px;
+	background:url(../images/btn.png) no-repeat;
+	width:120px;
+	height:35px;
+	border:none;
+	}
+	
+/*浠婃棩澶╂皵*/
+#today_container{
+    width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(100,100,100,0.3);
+    overflow: hidden;
+	color:#FFF;
+	
+}
+/*澶╂皵鍥剧墖*/
+#today_container dl img{
+		float:left;
+		width:140px;
+		height:140px;
+	}
+#today_container dt{
+		float:left;
+		padding-right:25px;
+		}
+#today_container dl dd{
+		padding-left:30px;
+		padding-right:15px;
+		}
+.today-city{ font-size: 24px;
+    margin-bottom:15px;
+	}
+.today-info{
+	  font-size:16px;
+	 margin-bottom:15px;
+	}
+.today-ganmao{
+	  font-size:16px;
+	 margin-bottom:15px;
+	}
+	
+/*鏈潵澶╂皵*/
+#future_container{
+    margin: 80px auto 0 auto;
+    width: 950px;
+    text-align: center;
+    overflow: hidden;
+}
+
+#future_container dl{
+	float: left;
+    width: 185px;
+    padding: 20px 0;
+    margin: 0 25px;
+    background: rgba(100, 100, 100, 0.7);
+	font-weight:600;
+	font-size:18px;
+	}
+#future_container dl:hover{
+	background: rgba(100, 100, 100, 0.4);
+	}
+#future_container dl dt img{
+		width:140px;
+		height:140px;
+	}
+#future_container dl dd{
+		margin-bottom:10px;
+		text-align:center;
+		color:#FFF;
+	}
+
+

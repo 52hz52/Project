@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.appsys.dao.devuser.DevUserMapper">
+	<select id="getLoginUser" resultType="DevUser">
+		select * from dev_user where devCode = #{devCode}
+	</select>
+	
+	<update id="updateUserInfo" parameterType="DevUser">
+		update dev_user
+		<trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+			<if test="devCode != null">devCode=#{devCode},</if>
+			<if test="devName != null">devName=#{devName},</if>
+			<if test="devPassword != null">devPassword =#{devPassword },</if>
+			<if test="devEmail != null">devEmail=#{devEmail},</if>
+			<if test="devInfo != null">devInfo=#{devInfo},</if>
+		</trim>
+	</update>
+	
+	
+	<insert id="insertUser" parameterType="DevUser">
+	 insert into dev_user (devCode,devName,devPassword,devEmail,devInfo) VALUES
+		(#{devCode},#{devName},#{devPassword},#{devEmail},#{devInfo})
+	</insert>
+	
+	
+	
+	
+</mapper>

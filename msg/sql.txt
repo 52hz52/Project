@@ -1,0 +1,42 @@
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`BBS_Message` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
+
+USE `BBS_Message`;
+
+DROP TABLE IF EXISTS `msg_userinfo`;
+-- 用户表
+CREATE TABLE `msg_userinfo`(
+   uid int auto_increment PRIMARY key,
+	`username` VARCHAR(20) NOT NULL, -- 用户姓名
+	`password` VARCHAR(20) NOT NULL, -- 密码
+	`email` varchar(20) NOT NULL -- 邮箱
+) ENGINE=INNODB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+DROP TABLE IF EXISTS `msg`;
+-- 信息表
+CREATE TABLE `msg`(
+	`msgid` INT NOT NULL auto_increment PRIMARY key ,-- id
+	`username` VARCHAR(100) NOT NULL, -- 用户名
+	`title` VARCHAR(100) NOT NULL,-- 标题
+	`msgcontent` VARCHAR(500) NOT NULL,-- 内容
+	`state` INT NOT NULL,-- 状态 0  1 未读 已读
+	`sendto` VARCHAR(20) NOT NULL,-- 发送的人
+	`msgcreatedate` timestamp  default now()
+) ENGINE=INNODB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--  alter table msg add constraint u_id_msg foreign key(msgid) REFERENCES msg_userinfo(uid);
+
+insert into msg(msgid,username,title,msgcontent,state,sendto) VALUES ('1','12','2','3','4','tom' );
+
+
+select * from msg where sendto = 123;
+
+
+
+UPDATE msg set state = '1' ;
+
+
+
+
+
+
+
