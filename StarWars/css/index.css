@@ -1,0 +1,137 @@
+/* CSS Document */
+*{
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    border: 0px;
+    list-style: none;
+}
+html{
+    height: 100%;
+}    
+body{
+    background: url("../img/background-1.jpg") no-repeat 100% 100%;
+
+}
+#StarWarsGAME{
+
+}
+/*开始游戏*/
+#Start{
+    padding: 50px;
+    text-align: center;
+}
+#GameShows{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.pre{
+    white-space: pre-line;
+}
+.message {
+    font-size: 1.65rem;
+    line-height: 2;
+    margin: 0 auto;
+    text-align: justify;
+}
+.start-btn{
+    width: 200px;
+    height: 40px;
+    background-color: #84261a;
+    border-radius: 8px;
+    position: absolute;
+    margin:auto;
+    right: 0;
+    left: 0;
+    bottom: 70px;
+}
+/*游戏主体*/
+#play{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+#top-menu{
+    text-align: justify;
+    text-align-last:justify
+}
+#top-menu li{
+    display: inline-block;
+}
+#top-menu li>img{
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+}
+#content{
+    position: absolute;
+    top:10%;
+    left: 0;
+    width: 100%;
+    height: 90%;
+}
+/*结束样式*/
+#over{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+#over-menu{
+    width: 40%;
+    text-align: justify;
+    text-align-last:justify;
+    position: absolute;
+    margin:80px auto;
+    left: 0;
+    right: 0;
+}
+#over-menu li{
+    margin-top: 20px;
+}
+#over-menu li>img{
+    width: 80px;
+    height: 80px;
+    margin-left: 10rem;
+    vertical-align: middle;
+}
+#over-menu li>span{
+    font: 25px bold;
+    margin-right: 10rem;
+}
+#username{
+    color: black;
+    font: 20px bold;
+    text-align: center;
+    width: 300px;
+    height: 40px;
+    border-radius: 8px;
+    position: absolute;
+    margin:auto;
+    right: 0;
+    left: 0;
+    bottom: 150px;
+}
+/*敌机图片*/
+.airplane{
+    background-image: url("../img/plane/enemy.png");
+}
+/*玩家图片*/
+#player{
+    background-image: url("../img/plane/player.png");
+}
+/*子弹图片*/
+.PlayerBullets{
+    background-image: url("../img/playerBullet.png");
+    background-size: 100% 100%;
+}
+.AirBullet{
+    background-image: url("../img/enemyBullet.png");
+    background-size: 100% 100%;
+}

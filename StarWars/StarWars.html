@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>星球大战</title>
+</head>
+<link rel="stylesheet" href="css/index.css">
+<body onkeydown="bindEvent()">
+    <div id="StarWarsGAME">
+        <!--<div id="Start">-->
+            <!--<div id="logo">-->
+               <!--<img src="img/logo-01.png" id="StartIMG" alt="星球大战">-->
+            <!--</div>-->
+            <!--<div id="GameShows">-->
+                <!--<p class="message pre">-->
+                    <!--1. 使用 W、A、S、D 控制飞船，按下 Space 发射。-->
+                    <!--2. 燃料初始值为15，每秒递减1点，当燃料值为0时，游戏结束。-->
+                    <!--3. 触碰掉下的燃料瓶可增加15点，最大值为30点。-->
+                    <!--4. 击中敌方飞船增加5分。行星需击中两次，增加10分。击中友方扣除10分。-->
+                    <!--5. 撞击敌方损失15点燃料，撞击友方扣除10分。-->
+                    <!--6. 游戏允许负分。-->
+                    <!--7. 按下 P 暂停游戏，按下 M 静音。-->
+                    <!--开始您的星际大战吧！-->
+                <!--</p>-->
+                <!--<button class="start-btn">-->
+                 <!--开始游戏-->
+                <!--</button>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div id="play">
+            <div id="top-menu">
+                <ul>
+                    <li><img src="img/time3.png" alt="存活时间" ><span id="time"></span></li>
+                    <li><img src="img/fuel2.png" alt="油量"><span></span></li>
+                    <li><img src="img/score.png" alt="分数"><span id="score"></span></li>
+                    <li><img src="img/playerBullet.png" alt="击毁敌机数量"><span></span></li>
+                    <li><img src="img/logo-01.png" style="width: 80%;height: 80%"></li>
+                    <li><img src="img/a+.png" alt="字体加大"></li>
+                    <li><img src="img/a-.png" alt="字体减小"></li>
+                    <li><img src="img/speaker.png" alt="背景音乐"></li>
+                    <li><img src="img/play.png" alt="暂停游戏"></li>
+                </ul>
+            </div>
+            <div id="content"></div>
+        </div>
+        <!--<div id="over">-->
+            <!--<div>-->
+                <!--<img src="img/logo-01.png" style="width: 20%;height: 20%;margin-top: 30px">-->
+            <!--</div>-->
+            <!--<div id="over-menu">-->
+                <!--<ul>-->
+                    <!--<li><img src="img/time3.png" alt="存活时间"> <span>00</span></li>-->
+                    <!--<li><img src="img/score.png" alt="分数"> <span>00</span></li>-->
+                    <!--<li><img src="img/playerBullet.png" alt="击毁敌机数量"> <span>00</span></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<input type="text" id="username" placeholder="留下你的名字">-->
+                <!--<button class="start-btn">继续游戏</button>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+</body>
+<script src="js/Start.js"></script>
+</html>
